@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #f0f0f0;
+            color: #333;
+            overflow-x: hidden;
+        }
+        nav {
+            background: #4CAF50;
+            color: #fff;
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #FFD700;
+        }
+        header {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+            padding: 100px 20px 60px;
+            text-align: center;
+            position: relative;
+            margin-top: 60px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            animation: fadeInDown 2s ease-in-out;
+        }
+        header p {
+            font-size: 1.2em;
+            animation: fadeInUp 2s ease-in-out;
+        }
+        header .btn {
+            background: #fff;
+            color: #4CAF50;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        header .btn:hover {
+            background: #f0f0f0;
+        }
+        section {
+            padding: 60px 20px;
+            transition: background 0.3s ease;
+        }
+        .about {
+            background-color: #ffe6e6;
+            padding: 60px 20px;
+            width: 100%;
+        }
+        .skills {
+            background-color: #e6f7ff;
+            padding: 60px 20px;
+            width: 100%;
+        }
+        .projects {
+            background-color: #e6ffe6;
+            padding: 60px 20px;
+            width: 100%;
+        }
+        .contact {
+            background-color: #fff0e6;
+            padding: 60px 20px;
+            width: 100%;
+        }
+        .about, .skills, .projects, .contact {
+            margin: 0 auto;
+            text-align: center;
+        }
+        .skills .skill-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .skills .skill {
+            width: 100%;
+            margin: 10px 0;
+            text-align: left;
+        }
+        .skills .skill div {
+            background: #4CAF50;
+            height: 20px;
+            border-radius: 5px;
+            color: #fff;
+            text-align: right;
+            padding-right: 10px;
+            line-height: 20px;
+            transition: width 0.5s ease-in-out;
+        }
+        .projects .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-right: 3%;
+        }
+        .projects .project-list .project {
+            background: #fff;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(30%);
+            max-width: calc(29%);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+        .projects .project-list .project:hover {
+            transform: scale(1.05);
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact form input, .contact form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80%;
+        }
+        .contact form button {
+            background: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .contact form button:hover {
+            background: #388E3C;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Your one-stop for all my work and skills</p>
+        <button class="btn" onclick="window.location.href='your-cv-link.pdf'">Download CV</button>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Shaik Nafeez, a passionate web developer with a knack for creating dynamic and user-friendly websites. I have a strong background in HTML, CSS, JavaScript, and various frameworks. I love coding and constantly strive to improve my skills and stay updated with the latest trends in web development.</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skill-list">
+            <div class="skill">
+                <span>HTML</span>
+                <div style="width: 60%;">60%</div>
+            </div>
+            <div class="skill">
+                <span>CSS</span>
+                <div style="width: 80%;">80%</div>
+            </div>
+            <div class="skill">
+                <span>JavaScript</span>
+                <div style="width: 75%;">75%</div>
+            </div>
+            <div class="skill">
+                <span>React</span>
+                <div style="width: 70%;">70%</div>
+            </div>
+            <div class="skill">
+                <span>Node.js</span>
+                <div style="width: 65%;">65%</div>
+            </div>
+            <div class="skill">
+                <span>Python</span>
+                <div style="width: 60%;">60%</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Gym Management System</h3>
+                <p>Developed a comprehensive Gym Management System to streamline membership tracking, workout scheduling, and billing processes, enhancing operational efficiency. Implemented features like automated notifications, member profile management, and performance analytics, improving user experience and retention.</p>
+            </div>
+            <div class="project">
+                <h3>Online Voting System</h3>
+                <p>Designed and implemented an Online Voting System to facilitate secure and efficient elections, featuring user authentication, real-time vote counting, and result analytics. Enhanced voter accessibility and integrity with robust encryption and fraud prevention measures.</p>
+            </div>
+            <div class="project">
+                <h3>Fake News Detection</h3>
+                <p>Developed a Fake News Detection system using machine learning algorithms to identify and flag misleading content, improving the reliability of online information. Implemented natural language processing techniques for accurate classification and real-time analysis of news articles.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>
